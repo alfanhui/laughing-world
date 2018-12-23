@@ -2,7 +2,7 @@
 
 ##### A LightDM Webkit Greeter Theme that doesn't force you to use a mouse.
 
-![Screenshot](https://raw.githubusercontent.com/alfanhui/laughingworld/master/img/screenshot_laughingworld.png)
+![Screenshot](https://raw.githubusercontent.com/alfanhui/laughingWorld/master/img/screenshot.png)
 
 This greeter theme was built based on the [Antergos Greeter Theme](https://github.com/Antergos/lightdm-webkit-theme-antergos)
 
