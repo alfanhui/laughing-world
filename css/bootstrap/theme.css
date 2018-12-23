@@ -25,6 +25,15 @@
       padding: 3px;
     }
 
+    #backgroundVideo {
+      position:absolute; 
+      top: 0px;
+      left: 0px; 
+      min-width: 100%; 
+      min-height: 100%; 
+      z-index:0; 
+      display:none"
+    }
 
 .laughingman {
     position: absolute;

@@ -3,57 +3,38 @@ var selectedSessionIndex = 0;
 
 /* Listeners required by Lightdm */
 function authentication_complete() {
-    writeDebugMessage("authentication_complete");
     if (lightdm.is_authenticated) {
-        writeDebugMessage("User is authenticated. Session: " + selectedSession.name);
         lightdm.login(lightdm.authentication_user, selectedSession.key);
     }
 }
 
-function show_error(message) {
-    writeDebugMessage("error: " + message);
-}
-
 function show_prompt(message) {
-    writeDebugMessage("prompt: " + message);
     lightdm.provide_secret(jQuery("#password").val());
-}
-
-/* Simple logging function */
-function writeDebugMessage(message) {
-    console.log(message);
 }
 
 /* Starts the sign in process */
 function submitPassword() {
-    writeDebugMessage("submitPassword");
-//    lightdm.cancel_authentication();
     lightdm.cancel_timed_login();
     lightdm.start_authentication(jQuery("#username").val());
 }
 
 /* Cycle among different sessions */
 function cycleSessions() {
-    writeDebugMessage("cycleSessions");
     selectedSession = lightdm.sessions[++selectedSessionIndex % lightdm.sessions.length];
     updateSessionNameContainer();
     jQuery("#sessionDisplay").show();
-    writeDebugMessage("selectedSession: " + selectedSession.name);
 }
 
 var userIndex = 0;
 function cycleUsers() {
-    writeDebugMessage("cycleUsers");
     jQuery("#username").val(lightdm.users[++userIndex % lightdm.users.length].name);
 }
 
 function updateSessionNameContainer() {
-    writeDebugMessage("updateSessionNameContainer: " + selectedSession.name);
     jQuery("#sessionNameContainer").html(selectedSession.name);
 }
 
 jQuery(document).ready(function() {
-
     /* Creates the keypress listener to submit when the user
        presses ENTER or SHIFT+ENTER */
     jQuery("input").keypress(function() {
@@ -95,13 +76,7 @@ jQuery(document).ready(function() {
     updateSessionNameContainer();
 
 
-    $('#motherOfAllContainers').fadeTo('slow', 0.3, function() {
-        // $('#motherOfAllContainers').css("background", "url(/usr/share/lightdm-webkit/themes/musfealle/img/conc.jpg) no-repeat center center fixed");
-        // $('#motherOfAllContainers').css("-webkit-background-size", "cover");
-        // $('#motherOfAllContainers').css("-moz-background-size", "cover");
-        // $('#motherOfAllContainers').css("-o-background-size", "cover");
-        // $('#motherOfAllContainers').css("background-size: 100%");
-
+    $('#motherOfAllContainers').fadeTo('slow', 0.2, function() {
         $("#inputBoxesContainer").show();
         $("#backgroundVideo").show();
         $("#image").show();
@@ -109,6 +84,6 @@ jQuery(document).ready(function() {
         /* Moves the focus to the password field so in the best case scenario
            all the user has to do is type in the password and press ENTER */
         jQuery("#password").focus();
-    }).fadeTo(2500, 1);
+    }).fadeTo(3500, 1);
 
 });
