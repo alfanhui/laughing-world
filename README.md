@@ -1,6 +1,6 @@
-# Alfanhui
+# LaughingWorld
 
-##### A LightDM Webkit Greeter Theme
+##### A LightDM Webkit Greeter Theme which the world spins on login screen.
 
 ![Screenshot](https://raw.githubusercontent.com/alfanhui/laughingWorld/master/img/screenshot.png)
 
@@ -28,3 +28,5 @@ And that should be it!
 - Alt + S or Alt + C: Cycle through the session options
 - Tab: Move focus between username and password fields
 - Enter: Log In
+
+Thanks to [Youtube video of the world](https://www.youtube.com/watch?v=qzxYumjbOMY). I have edited the video so it spins the right way and slowed it down a bit.
