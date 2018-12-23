@@ -1,6 +1,6 @@
 # Alfanhui
 
-##### A LightDM Webkit Greeter Theme that doesn't force you to use a mouse.
+##### A LightDM Webkit Greeter Theme
 
 ![Screenshot](https://raw.githubusercontent.com/alfanhui/laughingWorld/master/img/screenshot.png)
 
