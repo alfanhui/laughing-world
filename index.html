@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lightdm Greeter</title>
+
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/mock.js"></script>
+  <script src="js/main.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap/theme.css" />
+</head>
+
+<body>
+  <div id="motherOfAllContainers">
+    <video id="backgroundVideo" poster="img/login.png" autoplay="" loop="" src="videos/earth.webm" style="position:absolute; top: 0px;
+        left: 0px; min-width: 100%; min-height: 100%; z-index:0; display:none"></video>
+     
+     <div class="laughingman" id=image></div>
+    <div id="inputBoxesContainer" style="display:none">
+      
+      <div>
+        <input type="text" name="username" id="username" class="form-control">
+      </div>
+
+      <div>
+        <input type="password" name="password" id="password" class="form-control">
+      </div>
+      <div id="sessionDisplay">
+        Session: <span id="sessionNameContainer"></span>
+      </div>
+
+    </div>
+  <div class="footer">
+    <div id="action_suspend" class="action button">
+      <div class="action_image_wrapper" onclick="lightdm.suspend();"><img class="action_image" src="img/sleep.svg" /></div>
+      <span class="action_label">Sleep</span>
+    </div>
+    <div id="action_restart" class="action button">
+      <div class="action_image_wrapper" onclick="lightdm.restart();"><img class="action_image" src="img/restart.svg" /></div>
+      <span class="action_label">Restart</span>
+    </div>
+    <div id="action_shutdown" class="action button">
+      <div class="action_image_wrapper" onclick="lightdm.shutdown();"><img class="action_image" src="img/shutdown.svg" /></div>
+      <span class="action_label">Shutdown</span>
+    </div>
+  </div>
+  
+</body>
+
+</html>

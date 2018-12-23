@@ -1,0 +1,6 @@
+[theme]
+name=Alfanhui
+description=A simple lightdm greeter
+engine=lightdm-webkit-greeter
+url=index.html
+session=X-Cinnamon
