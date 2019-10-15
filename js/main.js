@@ -71,7 +71,7 @@ jQuery(document).ready(function() {
     });
 
     /* Initiates the username field with the first username of the users' list */
-    jQuery("#username").val(lightdm.users[0].name);
+    jQuery("#username").val("noodles"); //lightdm.users[0].name
 
     updateSessionNameContainer();
 

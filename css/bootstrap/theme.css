@@ -37,8 +37,8 @@
 
 .laughingman {
     position: absolute;
-    top: calc(25%);
-    left: calc(50%  - 4.5em);
+    top: calc(87%);
+    left: calc(95% - 3.5em);
     height: 150px;
     width: 160px;
     background: url('../../img/icon.png') no-repeat;
@@ -59,7 +59,7 @@
 
     #inputBoxesContainer {
       position: absolute;
-      top: calc(40%);
+      top: calc(35%);
       left: calc(50% - 8em);
     }
 
