@@ -26,6 +26,7 @@ function cycleSessions() {
 }
 
 var userIndex = 0;
+
 function cycleUsers() {
     jQuery("#username").val(lightdm.users[++userIndex % lightdm.users.length].name);
 }
@@ -35,6 +36,7 @@ function updateSessionNameContainer() {
 }
 
 jQuery(document).ready(function() {
+
     /* Creates the keypress listener to submit when the user
        presses ENTER or SHIFT+ENTER */
     jQuery("input").keypress(function() {
@@ -47,25 +49,32 @@ jQuery(document).ready(function() {
     jQuery(document).keydown(function() {
         if (!event.shiftKey && !event.ctrlKey && event.altKey && !event.metaKey) {
             switch (event.which) {
-                case 83: /* Alt + S */
-                case 67: /* Alt + C */
+                case 83:
+                    /* Alt + S */
+                case 67:
+                    /* Alt + C */
                     cycleSessions();
                     break;
-                case 72: /* Alt + H */
+                case 72:
+                    /* Alt + H */
                     lightdm.hibernate();
                     break;
-                case 80: /* Alt + P */
+                case 80:
+                    /* Alt + P */
                     lightdm.suspend();
                     break;
-                case 82: /* Alt + R */
+                case 82:
+                    /* Alt + R */
                     lightdm.restart();
                     break;
-                case 76: /* Alt + L */
+                case 76:
+                    /* Alt + L */
                     cycleUsers();
                     break;
-            case 68: /* Alt + D */
-                lightdm.shutdown();
-                break;
+                case 68:
+                    /* Alt + D */
+                    lightdm.shutdown();
+                    break;
             }
         }
     });
@@ -75,11 +84,13 @@ jQuery(document).ready(function() {
 
     updateSessionNameContainer();
 
+    $('#backgroundVideo').click(function() {
+        $('#username').focus();
+    });
 
     $('#motherOfAllContainers').fadeTo('slow', 0.2, function() {
         $("#inputBoxesContainer").show();
         $("#backgroundVideo").show();
-        $("#image").show();
 
         /* Moves the focus to the password field so in the best case scenario
            all the user has to do is type in the password and press ENTER */
