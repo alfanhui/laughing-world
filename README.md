@@ -6,6 +6,8 @@
 
 This greeter theme was built based on the [Antergos Greeter Theme](https://github.com/Antergos/lightdm-webkit-theme-antergos)
 
+## Setup
+1. Find a suitable background video, convert it to .webm, and place the video here: `./vid/earth.webm`
 
 ## Installation
 
